@@ -186,21 +186,14 @@ const App: React.FC = () => {
   const renderSetup = () => (
     <div className="max-w-xl mx-auto bg-[#1E6F63]/40 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/10">
       <div className="text-center mb-10">
-        <div className="bg-[#2FD3A7]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-3 shadow-lg border border-[#2FD3A7]/30">
-          <BookOpen className="text-[#2FD3A7] w-10 h-10" />
+        <div className="bg-[#2FD3A7]/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-3 shadow-lg border border-[#2FD3A7]/30">
+          <BookOpen className="text-[#2FD3A7] w-8 h-8" />
         </div>
         
-        <h1 className="text-5xl md:text-6xl font-[900] tracking-tighter leading-none uppercase italic text-white">
-          HỌC TOÁN THCS
-          <br />
-          <span className="text-[#2FD3A7]">TRỰC TUYẾN</span>
+        {/* 1. Tiêu đề nhỏ lại trên 1 dòng */}
+        <h1 className="text-4xl md:text-5xl font-[900] tracking-tighter leading-none uppercase italic text-white whitespace-nowrap">
+          HỌC TOÁN THCS <span className="text-[#2FD3A7]">TRỰC TUYẾN</span>
         </h1>
-        
-        <p className="text-white/80 mt-6 font-medium uppercase tracking-[0.2em] text-xs">Hệ sinh thái giáo dục 4.0</p>
-        
-        <div className="mt-4 py-1.5 px-6 bg-[#176A5D] rounded-full inline-block border border-white/10 shadow-inner">
-          <p className="text-[#2FD3A7] text-sm font-black uppercase tracking-widest">GV BIÊN SOẠN: VĂN HÀ</p>
-        </div>
       </div>
 
       <div className="space-y-6">
@@ -460,23 +453,29 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#176A5D] py-16 px-4 sm:px-8 font-sans selection:bg-[#2FD3A7]/30">
+    <div className="min-h-screen bg-[#176A5D] relative font-sans selection:bg-[#2FD3A7]/30">
+      {/* 2 & 3. Thông tin hệ sinh thái và giáo viên ở góc trên cùng bên trái */}
+      <div className="absolute top-6 left-6 z-10 text-white/70 space-y-1.5 p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#2FD3A7]">Hệ sinh thái giáo dục 4.0</p>
+        <p className="text-xs font-medium uppercase tracking-[0.2em]">Giáo viên biên soạn: <span className="font-bold text-white">VĂN HÀ</span></p>
+      </div>
+
       {/* Hiệu ứng ánh sáng nền */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute top-[-10%] left-[-10%] w-[45%] h-[45%] bg-[#2FD3A7] rounded-full blur-[140px]"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-400 rounded-full blur-[120px]"></div>
       </div>
       
-      <div className="relative z-0">
+      <div className="relative z-0 pt-28 pb-16 px-4 sm:px-8">
         {view === 'setup' && renderSetup()}
         {view === 'loading' && <LoadingScreen />}
         {view === 'quiz' && renderQuiz()}
         {view === 'summary' && renderSummary()}
       </div>
 
-      <footer className="mt-12 text-center relative z-0">
+      <footer className="pb-12 text-center relative z-0">
         <p className="text-white/40 font-medium text-xs uppercase tracking-[0.3em]">
-          Biên soạn bởi <span className="text-[#2FD3A7] font-black">GV VĂN HÀ</span> © 2026
+          © 2026 Copyright by <span className="text-[#2FD3A7] font-black">GV VĂN HÀ</span>
         </p>
       </footer>
     </div>
@@ -484,4 +483,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-          
