@@ -190,9 +190,9 @@ const App: React.FC = () => {
           <BookOpen className="text-[#2FD3A7] w-8 h-8" />
         </div>
         
-        {/* 1. Tiêu đề nhỏ lại trên 1 dòng */}
-        <h1 className="text-4xl md:text-5xl font-[900] tracking-tighter leading-none uppercase italic text-white whitespace-nowrap">
-          HỌC TOÁN THCS <span className="text-[#2FD3A7]">TRỰC TUYẾN</span>
+        {/* 1. Tiêu đề nhỏ lại trên 1 dòng & Bỏ chữ Trực tuyến */}
+        <h1 className="text-3xl md:text-4xl font-[900] tracking-tighter leading-none uppercase italic text-white whitespace-nowrap overflow-hidden">
+          HỌC TOÁN THCS
         </h1>
       </div>
 
@@ -439,8 +439,6 @@ const App: React.FC = () => {
             </div>
             <p className="text-xl font-bold opacity-60 uppercase tracking-[0.3em]">Kết quả ôn luyện</p>
           </div>
-          {/* Ánh sáng trang trí */}
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,rgba(47,211,167,0.15),transparent_70%)]"></div>
         </div>
 
         <div className="p-10 space-y-10 bg-black/5">
@@ -455,9 +453,9 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#176A5D] relative font-sans selection:bg-[#2FD3A7]/30">
       {/* 2 & 3. Thông tin hệ sinh thái và giáo viên ở góc trên cùng bên trái */}
-      <div className="absolute top-6 left-6 z-10 text-white/70 space-y-1.5 p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-        <p className="text-xs font-black uppercase tracking-[0.2em] text-[#2FD3A7]">Hệ sinh thái giáo dục 4.0</p>
-        <p className="text-xs font-medium uppercase tracking-[0.2em]">Giáo viên biên soạn: <span className="font-bold text-white">VĂN HÀ</span></p>
+      <div className="absolute top-6 left-6 z-10 text-white/70 space-y-1 p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2FD3A7]">Hệ sinh thái giáo dục 4.0</p>
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em]">Giáo viên biên soạn: <span className="font-bold text-white">VĂN HÀ</span></p>
       </div>
 
       {/* Hiệu ứng ánh sáng nền */}
