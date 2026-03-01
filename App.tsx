@@ -196,7 +196,7 @@ const App: React.FC = () => {
             HỌC TOÁN THCS
           </span>
           <br />
-          <span className="text-white">SIÊU TỐC</span>
+          <span className="text-white">TRỰC TUYẾN</span>
         </h1>
         
         <p className="text-slate-400 mt-6 font-medium uppercase tracking-[0.2em] text-xs">Hệ thống ôn luyện thông minh</p>
