@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="bg-[#020617]">
+<html lang="vi" class="bg-[#176A5D]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +14,12 @@
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
             colors: {
-              navy: {
-                950: '#020617', // Nền xanh đen thẫm
-                900: '#0f172a', // Nền thẻ (Card)
-                800: '#1e293b', // Viền và nút
+              edu: {
+                dark: '#176A5D',   // Xanh lục đậm chính
+                mint: '#2FD3A7',   // Xanh Mint highlight
+                light: '#FFFFFF',  // Chữ trắng
               }
             }
           }
@@ -29,41 +27,24 @@
       }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-
     <style>
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #020617;
-        color: #ffffff; /* Chữ trắng thuần */
+        background-color: #176A5D;
+        color: #FFFFFF;
         margin: 0;
-        overflow-x: hidden;
       }
-
-      /* Hiệu ứng hào quang (Glow) giống trong hình */
+      /* Hiệu ứng ánh sáng nhẹ phía sau */
       .glow-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 50% 20%, rgba(251, 146, 60, 0.1) 0%, transparent 50%);
-        pointer-events: none;
-        z-index: -1;
-      }
-
-      mjx-container {
-        display: inline-block !important;
-        margin: 0 !important;
-        vertical-align: middle !important;
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at 50% 20%, rgba(47, 211, 167, 0.1) 0%, transparent 50%);
+        pointer-events: none; z-index: -1;
       }
     </style>
   </head>
   <body>
     <div class="glow-bg"></div>
-
     <div id="root"></div>
-    
-    <script type="module" src="/main.tsx"></script>
+    <script type="module" src="./main.tsx"></script>
   </body>
 </html>
